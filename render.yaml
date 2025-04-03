@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: fb-webhook-proxy
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app --bind 0.0.0.0:10000
+    envVars:
+      - key: FORWARD_URL
+        value: https://webhook.aitechnic.ru/webhook/fblv
