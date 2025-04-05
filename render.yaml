@@ -7,4 +7,4 @@ services:
     startCommand: gunicorn main:app --bind 0.0.0.0:10000
     envVars:
       - key: FORWARD_URL
-        value: https://webhook.aitechnic.ru/webhook/fblv
+        value: https://n8n.ai-assistant-integration.realiste.dev/webhook/fbapp
